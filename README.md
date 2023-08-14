@@ -2,7 +2,7 @@
 
 
 ## Install Catcuda
-python set
+python setup.py install
 
 ## Pretrained Weights
 You can ran the code like "python file_name.py" directly using our pretrained weights.
