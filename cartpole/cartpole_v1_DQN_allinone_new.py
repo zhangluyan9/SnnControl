@@ -153,7 +153,7 @@ class Net(nn.Module):
             #generate spike train
             spikes_data = [x for _ in range(Quantized_activation_level)]
             out = torch.stack(spikes_data, dim=-1).type(torch.FloatTensor).cuda() #float
-            out = catCuda.getSpikes(out,0.999)
+            out = catCuda.getSpikes(threshold,0.999)
             sum_addition = torch.sum(out)
             out_hdc = out.clone()
             #print(out)
